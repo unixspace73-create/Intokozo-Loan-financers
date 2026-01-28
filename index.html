@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Intokozo Financial Services - Quick and easy loans from R100. Serving Kgapane and surrounding areas.">
+    <title>Intokozo Financial Services | Quick Loans from R100</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-hand-holding-usd"></i>
+                <span>Intokozo Financial Services</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#products" class="nav-link">Loan Products</a></li>
+                <li><a href="#apply" class="nav-link">How to Apply</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#apply" class="btn btn-primary btn-nav">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Quick Loans When You Need Them Most</h1>
+                <p class="hero-subtitle">Get loans starting from R100 with flexible payment options. Fast approval for regular applicants and SASSA recipients.</p>
+                <div class="hero-buttons">
+                    <a href="#apply" class="btn btn-primary btn-lg">Apply for a Loan</a>
+                    <a href="#products" class="btn btn-secondary btn-lg">View Loan Products</a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Fast Approval</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure & Trusted</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users"></i>
+                        <span>SASSA Friendly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Calculator -->
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-card">
+                <h2>Quick Loan Calculator</h2>
+                <p class="calculator-subtitle">Calculate your loan repayment amount instantly</p>
+                
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="loanAmount">Loan Amount (R)</label>
+                        <input type="number" id="loanAmount" min="100" value="1000" step="100">
+                        <div class="range-labels">
+                            <span>Min: R100</span>
+                            <span id="maxLabel">Max: R10,000</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="calculateLoan()">Calculate</button>
+                    
+                    <div class="calculator-result" id="calculatorResult">
+                        <div class="result-item">
+                            <span class="result-label">Loan Amount:</span>
+                            <span class="result-value" id="resultLoan">R0</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Interest (40%):</span>
+                            <span class="result-value" id="resultInterest">R0</span>
+                        </div>
+                        <div class="result-item total">
+                            <span class="result-label">Total Repayment:</span>
+                            <span class="result-value" id="resultTotal">R0</span>
+                        </div>
+                        <p class="result-note">*One-time payment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Intokozo Financial Services</h2>
+                <p>Your trusted partner in financial solutions</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>Intokozo Financial Services Pty Ltd is a registered financial services provider dedicated to helping individuals and families access quick, reliable loans when they need them most. We serve the community of Kgapane and surrounding areas with pride and commitment.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>To provide accessible, transparent, and responsible lending solutions that empower our clients to meet their financial needs with dignity and confidence.</p>
+                    
+                    <h3>Why Choose Us?</h3>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check-circle"></i> Fast loan approval process</li>
+                        <li><i class="fas fa-check-circle"></i> Friendly service for SASSA grant recipients</li>
+                        <li><i class="fas fa-check-circle"></i> Transparent terms and conditions</li>
+                        <li><i class="fas fa-check-circle"></i> Loans starting from just R100</li>
+                        <li><i class="fas fa-check-circle"></i> Convenient location in Kgapane</li>
+                        <li><i class="fas fa-check-circle"></i> Professional and caring staff</li>
+                    </ul>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h3>500+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>R100+</h3>
+                        <p>Starting Amount</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Fast</h3>
+                        <p>Approval Process</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Products -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Loan Products</h2>
+                <p>Flexible financial solutions tailored to your needs</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card featured">
+                    <div class="product-badge">Most Popular</div>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Standard Loan</h3>
+                    <p class="product-subtitle">For Regular Applicants</p>
+                    
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Starting From</span>
+                            <span class="detail-value">R100</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Interest Rate</span>
+                            <span class="detail-value">40%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Payment Type</span>
+                            <span class="detail-value">Once-off</span>
+                        </div>
+                    </div>
+                    
+                    <h4>Requirements:</h4>
+                    <ul class="requirements-list">
+                        <li><i class="fas fa-file-alt"></i> Latest payslip</li>
+                        <li><i class="fas fa-university"></i> 3 months bank statements</li>
+                        <li><i class="fas fa-id-card"></i> Original ID document</li>
+                    </ul>
+                    
+                    <a href="#apply" class="btn btn-primary btn-block">Apply Now</a>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-badge sassa">SASSA Friendly</div>
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>SASSA Grant Loan</h3>
+                    <p class="product-subtitle">For Grant Recipients</p>
+                    
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Starting From</span>
+                            <span class="detail-value">R100</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Interest Rate</span>
+                            <span class="detail-value">40%</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Payment Type</span>
+                            <span class="detail-value">Once-off</span>
+                        </div>
+                    </div>
+                    
+                    <h4>Qualification:</h4>
+                    <p class="qualification-note">Grant income for 2 or more children</p>
+                    
+                    <h4>Requirements:</h4>
+                    <ul class="requirements-list">
+                        <li><i class="fas fa-id-card"></i> Pension ID</li>
+                        <li><i class="fas fa-credit-card"></i> SASSA card</li>
+                        <li><i class="fas fa-receipt"></i> Latest cash withdrawal slip</li>
+                        <li><i class="fas fa-university"></i> OR 3 months bank statements</li>
+                    </ul>
+                    
+                    <a href="#apply" class="btn btn-primary btn-block">Apply Now</a>
+                </div>
+            </div>
+            
+            <div class="terms-notice">
+                <i class="fas fa-info-circle"></i>
+                <p><strong>Important:</strong> All loans are subject to approval and our terms and conditions. Interest rates and terms comply with the National Credit Act (NCA). Responsible lending is our priority.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Apply -->
+    <section id="apply" class="apply-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How to Apply for a Loan</h2>
+                <p>Simple steps to get your loan approved</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Prepare Documents</h3>
+                    <p>Gather all required documents based on your application type (regular or SASSA recipient)</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Visit Our Branch</h3>
+                    <p>Come to our office at 670 Tax Rank Street, Kgapane during operating hours</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-edit"></i>
+                    <h3>Complete Application</h3>
+                    <p>Fill out the loan application form with assistance from our friendly staff</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Get Approved</h3>
+                    <p>Receive fast approval and get your loan disbursed quickly</p>
+                </div>
+            </div>
+            
+            <div class="requirements-section">
+                <h3>Document Checklist</h3>
+                
+                <div class="requirements-tabs">
+                    <button class="tab-btn active" onclick="showRequirements('regular')">Regular Applicants</button>
+                    <button class="tab-btn" onclick="showRequirements('sassa')">SASSA Recipients</button>
+                </div>
+                
+                <div class="tab-content active" id="regular-requirements">
+                    <div class="checklist">
+                        <div class="checklist-item">
+                            <i class="fas fa-file-invoice"></i>
+                            <div>
+                                <h4>Latest Payslip</h4>
+                                <p>Your most recent salary payment slip from your employer</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <h4>3 Months Bank Statements</h4>
+                                <p>Official bank statements covering the last three months</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-id-card"></i>
+                            <div>
+                                <h4>Original ID Document</h4>
+                                <p>Your valid South African identity document</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="sassa-requirements">
+                    <div class="qualification-box">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p><strong>Qualification Requirement:</strong> You must receive grant income for 2 or more children to qualify for this loan</p>
+                    </div>
+                    
+                    <div class="checklist">
+                        <div class="checklist-item">
+                            <i class="fas fa-id-badge"></i>
+                            <div>
+                                <h4>Pension ID</h4>
+                                <p>Your SASSA pension identification document</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-credit-card"></i>
+                            <div>
+                                <h4>SASSA Card</h4>
+                                <p>Your valid SASSA grant payment card</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item">
+                            <i class="fas fa-receipt"></i>
+                            <div>
+                                <h4>Latest Cash Withdrawal Slip</h4>
+                                <p>Your most recent SASSA cash withdrawal receipt</p>
+                            </div>
+                        </div>
+                        <div class="checklist-item alternative">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <h4>Alternative: 3 Months Bank Statements</h4>
+                                <p>Instead of the withdrawal slip, you can provide 3 months of bank statements</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-box">
+                <h3>Ready to Apply?</h3>
+                <p>Contact us today via WhatsApp or visit our branch</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/27" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                    <a href="#contact" class="btn btn-secondary">View Contact Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our loans</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What is the minimum loan amount I can apply for?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The minimum loan amount is R100. We offer flexible loan amounts to suit your needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How much interest do you charge?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We charge 40% interest on all loans. This is a once-off payment, meaning you pay the loan amount plus 40% interest in a single payment.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Can I apply if I receive a SASSA grant?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We welcome SASSA grant recipients. To qualify, you need grant income for 2 or more children. You'll need your pension ID, SASSA card, and either your latest cash withdrawal slip or 3 months of bank statements.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>How long does the approval process take?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We pride ourselves on fast approval. Most applications are processed quickly, often on the same day, provided all required documents are complete and in order.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>What payment methods do you accept?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept various payment methods including cash, bank transfers, and debit orders. Our loan structure requires a once-off payment of the principal plus interest.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Do I need to be employed to apply?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For our standard loan, yes, you need proof of employment (latest payslip). However, SASSA grant recipients can apply with their grant income if they receive grants for 2 or more children.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Where is your branch located?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We are located at 670 Tax Rank Street, Kgapane. You can visit us during our operating hours or contact us via WhatsApp or email for more information.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>Is my personal information safe?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We take data protection seriously and comply with POPIA (Protection of Personal Information Act). Your information is kept confidential and secure.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>We're here to help you with your financial needs</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:intokozofinancialservices@gmail.com">intokozofinancialservices@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>670 Tax Rank Street<br>Kgapane, Limpopo<br>South Africa</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Operating Hours</h4>
+                            <p>Mon-Sat: 08:00 - 17:30</p>
+                            <p class="note">*Additional hours available. Contact us for more details.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp Business</h4>
+                            <p>Chat with us instantly</p>
+                            <a href="https://wa.me/27" class="btn btn-whatsapp">Start Chat</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="loan-inquiry">Loan Inquiry</option>
+                                <option value="sassa-loan">SASSA Loan Application</option>
+                                <option value="general">General Question</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <h3>Find Us on the Map</h3>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>670 Tax Rank Street, Kgapane</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=670+Tax+Rank+Street+Kgapane" target="_blank" class="btn btn-secondary">Open in Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="compliance-section">
+        <div class="container">
+            <div class="compliance-content">
+                <h3><i class="fas fa-shield-alt"></i> Responsible Lending Commitment</h3>
+                <p>Intokozo Financial Services Pty Ltd is committed to responsible lending practices in accordance with the National Credit Act (NCA) of South Africa. We ensure transparency in all our dealings and encourage borrowers to borrow responsibly.</p>
+                
+                <div class="compliance-links">
+                    <a href="#" onclick="alert('Terms and Conditions document - Please contact us for full details'); return false;">Terms & Conditions</a>
+                    <a href="#" onclick="alert('Privacy Policy document - Please contact us for full details'); return false;">Privacy Policy</a>
+                    <a href="#" onclick="alert('Complaints Procedure document - Please contact us for full details'); return false;">Complaints Procedure</a>
+                </div>
+                
+                <p class="debt-counseling">
+                    <i class="fas fa-info-circle"></i>
+                    If you're struggling with debt, free counseling is available. Contact the National Credit Regulator at <strong>0860 627 627</strong> or visit <a href="https://www.ncr.org.za" target="_blank">www.ncr.org.za</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Intokozo Financial Services</h4>
+                    <p>Your trusted partner in financial solutions. We provide quick, reliable loans with transparent terms and excellent customer service.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Loan Products</a></li>
+                        <li><a href="#apply">How to Apply</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> intokozofinancialservices@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 670 Tax Rank Street, Kgapane</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sat: 08:00 - 17:30</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="https://wa.me/27" class="social-link whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:intokozofinancialservices@gmail.com" class="social-link email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                    <a href="https://wa.me/27" class="btn btn-whatsapp btn-sm"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Intokozo Financial Services Pty Ltd. All rights reserved.</p>
+                <p class="compliance-text">Registered financial services provider. Compliant with the National Credit Act (NCA).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/27" class="whatsapp-float" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
